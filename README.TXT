@@ -1,3 +1,22 @@
+=== thecoder08/DOOM README ===
+This is a fork of https://github.com/id-Software/DOOM with some patches
+to get it to build. Just run `make` in linuxdoom-1.10. You'll need 32bit
+versions of all the dependencies to build it. To run it, you'll need to
+use Xephyr. I use
+
+Xephyr :2 -ac -br -screen 960x600x8 -reset -terminate -title DOOM
+
+Then launch DOOM with
+
+DISPLAY=:2 linux/linuxxdoom -3 -warp 1 1 -file DOOM.WAD
+
+As with the original source, DOOM.WAD is not included. You'll need to
+"locate" it or use freedoom.
+
+NOTE: These instructions apply only to the code found at
+https://github.com/thecoder08/DOOM
+
+=== Original README ===
 
 Here it is, at long last.  The DOOM source code is released for your
 non-profit use.  You still need real DOOM data to work with this code.
