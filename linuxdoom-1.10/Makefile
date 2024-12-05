@@ -4,7 +4,7 @@
 #
 # $Log:$
 #
-CC=  gcc  # gcc or g++
+CC=  gcc -m32 # gcc or g++
 
 CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM 
 LDFLAGS=-L/usr/X11R6/lib
@@ -77,7 +77,10 @@ OBJS=				\
 		$(O)/info.o				\
 		$(O)/sounds.o
 
-all:	 $(O)/linuxxdoom
+all:	 linux $(O)/linuxxdoom
+
+linux:
+	mkdir linux
 
 clean:
 	rm -f *.o *~ *.flc
